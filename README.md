@@ -19,17 +19,29 @@ some of basic rule for the language should be :
 
 ## data type for vg
 
-     int8  int16, int32 int64, int128, int256, int512
-      uint8, uint16, uint64, uint128, uint256, uint512
-      char , wchar float, double
-      nil, string, wstring
-      []  {}
+basic date type 
+
+> int8  int16, int32 int64, int128, int256, int512
+
+> uint8, uint16, uint64, uint128, uint256, uint512
+
+> float double
+
+> char , wchar  nil, 
+
+>string, wstring
+
+> []  {}
 
 ## string defintion
 
     hello = 'you are welcome to here'
     hello = "you are welcome to here"
-    hello = '''you are welcome to here'''
+    
+    //using ''' to define multiple line string
+    hello = '''you are welcome 
+    why not
+    you are good to here'''
 
     hello:string = 'hello world'
     hello:wstring = 'hello,world'
@@ -94,9 +106,47 @@ main() int {
    record = [10] ; 
 
   while( a > 0 ) {
-       
+       a--
+       if(a == 3) break
+
   }
   return 0
 }
 
 ```
+
+## comment
+ there are two types of comment 
+ + one line comment. using '//' like c lanuage for one line comment
+ + multiply line comments. using /* */ like c language for multi lines comments
+
+## array 
+
+```c
+  //int array,lenth 5
+  record:int[5] = [1,3, 5, 7, 9]
+  //init 1000 element arary with 0
+  //array will use the left value to fill the rest of space.
+  value:int[1000] = [0]
+  //array : 2, 3, 3, 3, 3
+  count:int[5] = [2,3]
+  //not initialize int array
+  cout: int [5]
+
+  //generical type array, lenth 5
+  cout : [5]
+
+  //araray 1,1,1, 2, 2, 2
+  count:int[6] = [{1,3}, {2,3}]
+  
+  //auto type inference, string array, length 10
+  temp:[10] = ["you","are","not"]
+   
+  //int type tuple which refer to array
+  right int[] 
+  v = temp[0:3]
+
+  //slice copy from reference
+  z := temp[0:3]
+```
+
