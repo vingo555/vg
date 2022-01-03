@@ -127,7 +127,7 @@ main() int {
   record:int[5] = [1,3, 5, 7, 9]
   //init 1000 element arary with 0
   //array will use the left value to fill the rest of space.
-  value:int[1000] = [0]
+  value:int[1000] = [0, ...]
   //array : 2, 3, 3, 3, 3
   count:int[5] = [2,3]
   //not initialize int array
