@@ -1,6 +1,6 @@
-# vg language specification
+# vl language specification
 
-vg language is a common computer language and it is not realistic so far. 
+vl language is a common computer language and it is not realistic so far. 
 the following information is just some of thought about ideal computer language.
 
 some of basic rule for the language should be :
@@ -9,7 +9,7 @@ some of basic rule for the language should be :
 * as powerful as possible
 * easy to learn and easy to use
 
-## keywork for vg
+## keywork for vl
 `
   if else  for   
   return 
@@ -17,7 +17,7 @@ some of basic rule for the language should be :
   nil true false string
 `
 
-## data type for vg
+## data type for vl
 
 basic date type 
 
@@ -31,21 +31,40 @@ basic date type
 
 >string, wstring
 
+> any
+
 > []  {}
 
 ## string defintion
 
-    hello = 'you are welcome to here'
     hello = "you are welcome to here"
-    
-    //using ''' to define multiple line string
-    hello = '''you are welcome 
-    why not
-    you are good to here'''
+    hello = "book's name is \"computer and chip desip\", you can borrow it "
+
+    hello = 'you are 
+        welcome to here and it\'s mine.'
 
     hello:string = 'hello world'
     hello:wstring = 'hello,world'
     hello:wstring = '你好'
+
+and it also support the escapes of type which is compatible with c luanguage.
+
+* \n (New line) – We use it to shift the cursor control to the new line
+* \t (Horizontal tab) – We use it to shift the cursor to a couple of spaces to the right in the same line.
+* \a (Audible bell) – A beep is generated indicating the execution of the program to alert the user.
+* \r (Carriage Return) – We use it to position the cursor to the beginning of the current line.
+* \\ (Backslash) – We use it to display the backslash character.
+* \’ (Apostrophe or single quotation mark) – We use it to display the single-quotation mark.
+* \” (Double quotation mark)- We use it to display the double-quotation mark.
+* \0 (Null character) – We use it to represent the termination of the string.
+* \? (Question mark) – We use it to display the question mark. (?)
+* \nnn (Octal number)- We use it to represent an octal number.
+* \xhh (Hexadecimal number) – We use it to represent a hexadecimal number.
+* \v (Vertical tab)
+* \b (Backspace)
+* \e (Escape character)
+* \f (Form Feed page break)
+
 
 ### function defition
 + fnName(argument list) return value {}
